@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgb(227, 40, 209);
+        }
+
+        .square {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(145, 255, 0);
+        }
+
+        #square1 {
+            background-color: rgb(0, 255, 251);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="square" id="square1"></div>
+        <div class="square" id="square2"></div>
+    </div>
+    <button id="startBtn">Start Animation</button>
+    <button id="stopBtn">Stop Animation</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

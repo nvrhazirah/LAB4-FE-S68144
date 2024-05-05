@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Manager</title>
+<style>
+    #colorful-paragraph {
+        padding: 20px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+</style>
+<script>
+    function changeColor(color) {
+        document.getElementById('colorful-paragraph').style.backgroundColor = color;
+    }
+</script>
+</head>
+<body>
+    <p id="colorful-paragraph" onclick="changeColor('yellow')" ondblclick="changeColor('blue')" 
+    onmouseover="changeColor('red')" onmouseout="changeColor('green')">This is a colorful paragraph!</p>
+</body>
+</html>

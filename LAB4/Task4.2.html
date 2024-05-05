@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TextField Events</title>
+<style>
+    /*This is the  Style for the text field */
+    input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid pink; /* Change border color to pink */
+        border-radius: 5px;
+        transition: border-color 0.3s ease-in-out;
+    }
+
+    /* when the text field is focused */
+    input[type="text"]:focus {
+        border-color: pink; /* Change border color to pink when focused */
+        box-shadow: 0 0 5px pink; /* Add shadow effect when focused */
+    }
+
+    /*  when the text field value changes */
+    input[type="text"].changed {
+        border-color: pink; /* Change border color to pink when value changes */
+    }
+
+    /*  when the text field loses focus */
+    input[type="text"].blurred {
+        border-color: #ccc; /* Change border color to grey when blurred */
+    }
+</style>
+<script>
+    // Function to add a class when the text field value changes
+    function onChange() {
+        document.getElementById('myTextField').classList.add('changed');
+    }
+
+    // Function to add a class when the text field is focused
+    function onFocus() {
+        document.getElementById('myTextField').classList.add('focused');
+    }
+
+    // Function to remove a class when the text field loses focus
+    function onBlur() {
+        document.getElementById('myTextField').classList.remove('focused');
+        document.getElementById('myTextField').classList.add('blurred');
+    }
+</script>
+</head>
+<body>
+    <!-- Text field with event attributes -->
+    <input type="text" id="myTextField" onchange="onChange()" onfocus="onFocus()" onblur="onBlur()" placeholder="Type something...">
+</body>
+</html>
